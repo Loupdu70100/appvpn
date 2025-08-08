@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paramètrer Relais VPN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-6">
+  <div class="bg-gray-700 rounded-2xl shadow-lg p-8 w-full max-w-xl">
+    <h2 class="text-2xl font-semibold mb-6">Paramètrer Relais VPN</h2>
+    <form>
+      
+      <div class="space-y-6">
+        <div class="bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-xl">
+          <h3 class="text-lg font-medium mb-2">Relais VPN</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">IP public relais</label>
+              <input
+                id="iprelais"
+                type="text"
+                placeholder="203.0.113.42"
+                class="w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Port relais</label>
+              <input
+                id="portrelais"
+                type="text"
+                placeholder="51820"
+                class="w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-sm mb-1">Public Key</label>
+              <input
+                id="keypublicrelais"
+                type="text"
+                placeholder="pMo8Qp3u9A...5KD6n8s"
+                class="w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2 text-sm truncate focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="mt-6 bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-xl">
+          <h3 class="text-lg font-medium mb-2">Relais VPN</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">IP dans le VPN</label>
+              <input
+                id="ip"
+                type="text"
+                placeholder="10.8.0.2"
+                class="w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label class="block text-sm mb-1">IP que je souhaite accéder</label>
+              <input
+                id="ipallow"
+                type="text"
+                placeholder="192.168.1.50"
+                class="w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+        </div>
+    </form>
+      <div class="flex justify-end">
+       <button type="button" class=" mt-6 bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-2 rounded-md text-sm font-medium" id="runPythonBtn">Initialiser La Connexion</button>
+       <p id="result" class="mt-4 alert alert-info">Cliquez sur le bouton pour exécuter le script Python...</p>
+      </div>
+  </div>
+</body>
+</html>

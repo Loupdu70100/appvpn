@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Options de connexion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4  pt-[48px]">
+  <script src="inject-titlebar.js"></script>
+  <!--bouton au haut a gauche retoure-->
+  <div class="absolute top-4 left-4">
+    <button onclick="window.location.href='interface.html'" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Retour</button>
+  </div> 
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Connexion à l'hôte</h2>
+    <p id="selected-host" class="mb-6 text-center text-blue-600 font-medium"></p>
+
+    <div class="grid gap-4 mb-6">
+      <button id="ssh-btn" class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition">Console (SSH)</button>
+      <button id="vnc-btn" class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition">VNC</button>
+      <button id="rdp-btn" class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition">RDP</button>
+    </div>
+
+    <!-- Bloc des champs user/password et bouton connecter -->
+    <div id="auth-section" class="space-y-4 hidden">
+      <input type="text" id="user" placeholder="Nom d'utilisateur" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"  />
+      <input type="password" id="password" placeholder="Mot de passe" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"  />
+      <button id="connect" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">Se connecter</button>
+    </div>
+  </div>
+
+  <script src="option.js"></script>
+</body>
+</html>
