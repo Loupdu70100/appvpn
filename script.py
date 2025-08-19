@@ -256,8 +256,8 @@ def main():
             # --- Configuration du serveur SMTP ---
             port = 587  # Port standard pour STARTTLS
             smtp_server = "smtp.gmail.com"  # Exemple pour Gmail
-            login = "alerte@jet1oeil.com"  # Votre identifiant généré par Mailtrap
-            password = "dxiv gysb jbcr jhkn"  # Votre mot de passe généré par Mailtrap
+            login = "******@jet1oeil.com"  # Votre identifiant généré par Mailtrap
+            password = "***********"  # Votre mot de passe généré par Mailtrap
 
             # --- Création du message MIME ---
             message = MIMEMultipart("alternative")
@@ -374,4 +374,5 @@ def main():
         print(json.dumps({"error": "Aucune donnée reçue de Electron."}))
 
 if __name__ == "__main__":
+
     main()
